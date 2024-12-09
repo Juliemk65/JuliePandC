@@ -1,0 +1,1076 @@
+.App {
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+
+  grid-template-areas:
+    "Heading Heading Heading"
+    "Nav Nav Nav"
+    "Services Services Services"
+    "Team Testimonials Testimonials"
+    "Footer Footer Footer";
+
+  margin: 10px;
+  border-radius: 16px;
+  font-family: "Patrick Hand", cursive;
+  background-color: #1e5a7d;
+}
+
+a.navItems,
+textpath.title {
+  text-decoration: none;
+}
+
+.header {
+  background-color: rgb(255, 255, 230);
+  grid-area: Heading;
+  height: 120px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  color: rgb(71, 145, 255);
+  margin: 10px;
+}
+
+.svgBox {
+  border: solid rgb(71, 145, 255);
+  width: 100%;
+  color: rgb(71, 145, 255);
+  border-radius: 16px;
+}
+
+.title {
+  text-align: center;
+  width: 350px;
+  margin: 15px;
+  color: rgb(71, 145, 255);
+}
+
+.nav {
+  background-color: rgb(255, 255, 190);
+  grid-area: Nav;
+  height: 90px;
+  border-radius: 16px;
+  text-align: center;
+  margin: 0px 10px 10px 10px;
+  justify-content: center;
+}
+
+.nav-links {
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.navItems {
+  font-size: 25px;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+.main {
+  display: block;
+  overflow: auto;
+  background-color: rgb(251, 251, 152);
+  grid-area: Services;
+  border-radius: 16px;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0px 10px 10px 10px;
+}
+
+.dropin,
+.boarding,
+.daycare {
+  text-align: center;
+  border: 4px solid rgb(71, 145, 255);
+  border-radius: 16px;
+  margin: 40px;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 60px;
+  color: rgb(21, 114, 255);
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.dropinLink,
+.boardingLink,
+.daycareLink {
+  text-decoration: none;
+  text-align: center;
+}
+
+.boarding:hover,
+.dropin:hover,
+.daycare:hover {
+  transform: scale(1.05);
+  transition: ease;
+  transition-timing-function: ease-in-out 0.4s;
+  transition-duration: 0.5s;
+}
+
+.middle {
+  margin-bottom: 0px;
+  text-align: center;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+/*use code below to center boarding image in grid*/
+.boardingImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.leo,
+.trio,
+.murphy {
+  height: 250px;
+  max-width: 150%;
+  border-radius: 16px;
+  align-self: center;
+}
+
+.teamSection {
+  display: block;
+  overflow: auto;
+  background-color: rgb(253, 253, 228);
+  grid-area: Team;
+  border-radius: 16px;
+  max-width: 100%;
+  position: relative;
+  margin: 5px 0px 10px 10px;
+}
+
+.teamPicture {
+  float: left;
+  margin-top: 25px;
+  border-radius: 200px;
+  width: 50%;
+  height: 200px;
+  padding-right: 20px;
+}
+
+.team-header {
+  margin-top: 20px;
+}
+
+.teamParagraph {
+  padding: 0px;
+  margin-left: 10px;
+  font-size: 16px;
+  height: 450px;
+  margin-right: 10px;
+}
+
+.testimonials {
+  display: block;
+  overflow: auto;
+  background-color: rgb(255, 255, 190);
+  grid-area: Testimonials;
+  border-radius: 16px;
+  max-width: 100%;
+  font-size: 10px;
+  margin: 5px 10px 10px 5px;
+}
+
+.testImg {
+  display: block;
+  width: 350px;
+}
+
+.mySlides {
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  width: 70%;
+  height: 50%;
+  padding: 20px;
+}
+
+.text {
+  font-size: 25px;
+  align-items: flex-start;
+  padding-top: 5px;
+}
+
+.nametext {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.footer {
+  display: flex;
+  overflow: auto;
+  background-color: rgb(255, 255, 164);
+  grid-area: Footer;
+  border-radius: 16px;
+  color: rgb(0, 119, 255);
+  margin: 5px 10px 10px 10px;
+}
+
+.one,
+.two,
+.three {
+  flex: 1;
+  padding-top: 30px;
+  margin-right: 20px;
+}
+
+.hoursHeader {
+  margin-left: 25px;
+}
+
+li {
+  list-style: none;
+}
+
+input,
+label,
+button {
+  display: block;
+  margin-right: 10px;
+}
+
+.nameInput {
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.commentInput {
+  height: 100px;
+  width: 200px;
+}
+
+.footerSubmit {
+  margin-top: 10px;
+}
+
+/* booking page */
+
+.body {
+  display: grid;
+  grid-template-areas:
+    "Heading"
+    "Nav";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(35, 8fr);
+  text-align: center;
+  background-color: rgb(128, 179, 255);
+  margin: 0px;
+  align-content: center;
+  overflow: hidden;
+  font-family: "Patrick Hand", cursive;
+  height: 3000px;
+}
+
+.svgBoxB {
+  width: 400px;
+  height: 200px;
+  grid-column: 2;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bookingPage {
+  background-color: rgb(255, 236, 126);
+  grid-column: 2/3;
+  margin: 20px;
+  margin-top: 20px;
+  border-radius: 20px;
+  width: 500px;
+  height: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form {
+  align-content: center;
+  margin: auto;
+}
+
+.buttonBooking,
+.buttonBookingText {
+  align-items: center;
+  margin: auto;
+  margin-bottom: 0px;
+  width: 155px;
+  font-family: "Patrick Hand", cursive;
+  font-size: 15px;
+  border-radius: 16px;
+  background-color: rgb(0, 102, 255);
+  height: 30px;
+  color: white;
+  text-decoration: none;
+}
+
+.buttonBooking:hover,
+.buttonBookingText:hover {
+  cursor: pointer;
+}
+
+.buttonBooking:disabled {
+  background-color: gray;
+  cursor: default;
+}
+
+.button-container {
+  display: flex;
+  margin: auto;
+}
+
+/* Services Page */
+
+.servicesPage {
+  background-color: rgb(255, 236, 126);
+  margin: 0 auto;
+  font-family: "Patrick Hand", cursive;
+  gap: 10px;
+  display: block;
+  overflow: auto;
+}
+
+.svgBoxS {
+  width: 90%;
+  height: 200px;
+  grid-column: 2;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.headerS {
+  grid-column: 4;
+  grid-row: 1;
+  width: 500px;
+  margin: 10px auto 30px;
+
+  border: solid rgb(118, 172, 252);
+
+  text-align: center;
+  font-size: 35px;
+  border-radius: 16px;
+}
+
+.titles {
+  margin-left: 20px;
+  font-size: 22px;
+  grid-column: 2;
+  margin-top: 5px;
+  margin-top: 20px;
+}
+
+.oneS {
+  grid-row: 2;
+}
+
+.twoS {
+  grid-row: 3;
+}
+
+.threeS {
+  grid-row: 4;
+}
+
+.oneS,
+.twoS,
+.threeS {
+  grid-column: 2/7;
+  border: solid 6px white;
+  border-radius: 16px;
+  /* margin-right: 60px;
+margin-left: 60px;
+margin-bottom: 30px; */
+
+  margin: 10px 30px 10px;
+}
+
+.imgs1 {
+  grid-row: 2;
+}
+
+.imgs2 {
+  grid-row: 3;
+}
+
+.imgs3 {
+  grid-row: 4;
+}
+
+.imgs1,
+.imgs2,
+.imgs3 {
+  grid-column: 1;
+  display: block;
+  width: 350px;
+  height: 300px;
+  margin: 10px auto 10px;
+  border: solid 4px white;
+  border-radius: 16px;
+}
+
+#text {
+  margin-right: 60px;
+  margin-left: 20px;
+}
+
+.content {
+  background-color: rgb(124, 198, 255);
+  width: 90%;
+  margin-left: 40px;
+  margin-bottom: 15px;
+  border-radius: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  opacity: 0;
+}
+
+.content:hover {
+  opacity: 1;
+}
+
+.content > * {
+  transform: translateY(30px);
+  transition: transform 0.6s;
+}
+
+.content:hover > * {
+  transform: translateY(0px);
+}
+
+.button-container-s {
+  justify-content: center;
+}
+
+.bookingButton {
+  grid-column: 4;
+  grid-row: 5;
+  display: block;
+  width: 150px;
+  margin: 20px 50px 50px 50px;
+  font-family: "Patrick Hand", cursive;
+  font-size: 20px;
+  border-radius: 16px;
+  background-color: rgb(0, 102, 255);
+  height: 40px;
+  color: white;
+}
+
+.dropdown {
+  grid-column: 7/9;
+  grid-row: 2;
+  padding-bottom: 30px;
+  margin-left: 20px;
+}
+
+.dropdown-content {
+  height: 150px;
+  width: fit-content;
+  padding-right: 13px;
+  border-radius: 16px;
+  transform: translateY(-250px);
+  transition: transform 1.5s;
+  opacity: 0;
+}
+
+.walk,
+.park,
+.swim,
+.groom {
+  background-color: rgb(152, 208, 249);
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.listItems {
+  background-color: transparent;
+  padding-left: 10px;
+  padding-top: 5px;
+  font-size: 24px;
+  border: none;
+}
+
+.addOnButton {
+  font-family: "Patrick Hand", cursive;
+  border-radius: 15px;
+  color: #1e5a7d;
+  background-color: rgb(255, 217, 0);
+  font-size: 20px;
+  width: 150px;
+  height: 16%;
+}
+
+.refer-friend {
+  background-color: #68c8ff;
+  margin: 10px 20px 30px 20px;
+}
+
+@media (min-width: 1080px) {
+  .header {
+    background-color: rgb(250, 250, 162);
+    grid-area: Heading;
+    height: 120px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    color: rgb(71, 145, 255);
+    margin: 10px;
+  }
+
+  .svgBox {
+    border: solid #2a729b;
+    width: 100%;
+    color: rgb(71, 145, 255);
+    border-radius: 16px;
+  }
+
+  .title {
+    text-align: center;
+    width: 350px;
+    margin: 15px;
+    color: rgb(71, 145, 255);
+  }
+
+  .nav {
+    background-color: rgb(255, 255, 190);
+    grid-area: Nav;
+    border-radius: 16px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-links {
+    margin-top: 0px;
+    color: #f092d7;
+  }
+
+  .navItems {
+    margin: 10px 0px;
+    font-size: 25px;
+    margin-right: 20px;
+    text-decoration: none;
+    margin-top: 10px;
+    color: #d164b4;
+  }
+
+  .main {
+    display: block;
+    overflow: auto;
+    background-color: rgb(251, 251, 152);
+    grid-area: Services;
+    border-radius: 16px;
+  }
+
+  .cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .dropin,
+  .boarding,
+  .daycare {
+    background-color: #f0ed92;
+    text-align: center;
+    border: 4px solid #2887be;
+    border-radius: 16px;
+    margin: 40px;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 60px;
+    color: #2a729b;
+    padding-left: 80px;
+    padding-right: 80px;
+    box-shadow: 10px 5px 10px #2f94ce;
+  }
+
+  .dropinLink,
+  .boardingLink,
+  .daycareLink {
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .boarding:hover,
+  .dropin:hover,
+  .daycare:hover {
+    transform: scale(1.05);
+    transition: ease;
+    transition-timing-function: ease-in-out 0.4s;
+    transition-duration: 0.5s;
+  }
+
+  .middle {
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+
+  /*use code below to center boarding image in grid*/
+
+  .leo,
+  .trio,
+  .murphy {
+    display: block;
+    margin: auto;
+    max-width: 150%;
+    border-radius: 16px;
+  }
+
+  .teamSection {
+    display: block;
+    overflow: auto;
+    background-color: rgb(253, 253, 228);
+    grid-area: Team;
+    border-radius: 16px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .teamPicture {
+    float: left;
+    margin: 25px 15px;
+    border-radius: 200px;
+    width: 50%;
+    height: 200px;
+    padding-right: 20px;
+  }
+
+  .teamParagraph {
+    padding: 0px;
+    margin: 10px 20px;
+    font-size: 18px;
+    height: 450px;
+  }
+
+  .testimonials {
+    display: block;
+    overflow: auto;
+    background-color: rgb(255, 255, 190);
+    grid-area: Testimonials;
+
+    border-radius: 16px;
+    max-width: 100%;
+    font-size: 10px;
+    padding-bottom: 5px;
+  }
+
+  .testImg,
+  .pumpkin {
+    display: block;
+    width: 350px;
+    border-radius: 16px;
+    margin-left: 20px;
+  }
+
+  .mySlides {
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    height: 350px;
+    width: 70%;
+    height: 50%;
+    padding: 20px;
+  }
+
+  .two-cats {
+    display: flex;
+    margin-right: 20px;
+  }
+
+  .pumpkin {
+    margin-right: 20px;
+  }
+
+  .text {
+    font-size: 30px;
+    align-items: flex-start;
+    padding-top: 5px;
+    margin-left: 20px;
+  }
+
+  .nametext {
+    font-size: 35px;
+    padding-bottom: 10px;
+    margin-left: 20px;
+  }
+
+  .footer {
+    display: flex;
+
+    background-color: rgb(255, 255, 164);
+    grid-area: Footer;
+    height: 335px;
+    border-radius: 16px;
+    padding-left: 20px;
+    color: rgb(0, 119, 255);
+    font-size: 20px;
+  }
+
+  .one {
+    flex: 1;
+  }
+
+  .two {
+    flex: 1;
+    margin-right: 20px;
+  }
+
+  .hoursHeader {
+    margin-left: 25px;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  .three {
+    flex: 1;
+    padding-top: 30px;
+  }
+
+  input,
+  label,
+  button {
+    display: block;
+    margin-right: 10px;
+  }
+
+  .nameInput {
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+
+  .commentInput {
+    height: 100px;
+    width: 200px;
+  }
+
+  .footerSubmit {
+    margin-top: 10px;
+  }
+
+  .admin-login-button {
+    margin: 15px 15px;
+    border-radius: 10px;
+    color: #f0ed92;
+    background-color: #1e5a7d;
+    border: #f0ed92 3px solid;
+    font-size: 18px;
+    width: 120px;
+  }
+  .admin-login-button:hover {
+    background-color: #4e8aad;
+  }
+
+  /*Booking Page*/
+
+  .body {
+    display: grid;
+    grid-template-areas:
+      "Heading"
+      "Nav";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(35, 8fr);
+    text-align: center;
+    background-color: rgb(128, 179, 255);
+    margin: 0px;
+    align-content: center;
+    overflow: hidden;
+    font-family: "Patrick Hand", cursive;
+    height: 3000px;
+  }
+
+  .svgBoxB {
+    width: 400px;
+    height: 200px;
+    grid-column: 2;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .bookingPage {
+    background-color: rgb(255, 236, 126);
+    grid-column: 2/3;
+    margin: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    width: 500px;
+    height: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+  }
+
+  .bookingHeader {
+    padding-top: 15px;
+  }
+
+  .buttonBooking,
+  .buttonBookingText {
+    align-items: center;
+    margin: auto;
+    margin-bottom: 0px;
+    width: 155px;
+    font-family: "Patrick Hand", cursive;
+    font-size: 15px;
+    border-radius: 16px;
+    background-color: rgb(0, 102, 255);
+    height: 30px;
+    color: white;
+    text-decoration: none;
+  }
+
+  .buttonBooking:hover,
+  .buttonBookingText:hover {
+    cursor: pointer;
+  }
+
+  .buttonBooking:disabled {
+    background-color: gray;
+    cursor: default;
+  }
+
+  .button-container {
+    display: flex;
+    margin: auto;
+  }
+
+  /*Services page*/
+
+  .servicesPage {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    overflow: visible;
+  }
+
+  .svgBoxS {
+    grid-column: 1/2;
+    width: 250px;
+    margin-top: 20px;
+  }
+
+  .imgs1,
+  .imgs2,
+  .imgs3 {
+    display: block;
+    margin-left: 30px;
+  }
+
+  .headerS {
+    padding-top: 20px;
+    margin-top: 60px;
+    margin-bottom: 80px;
+  }
+
+  .button-container-s {
+    grid-row: 5;
+    grid-column: 4;
+  }
+
+  /* .dropdown {
+    grid-column: 7;
+    grid-row: 2;
+    width: 180%;
+  } */
+
+  .addOnButton {
+    color: #1e5a7d;
+    background-color: rgb(255, 217, 0);
+    font-size: 20px;
+    height: 13%;
+    grid-column: 7;
+    grid-row: 2;
+    width: 200px;
+  }
+
+  .svg:not(:host).svg-inline--fa,
+  svg:not(:root).svg-inline--fa {
+    margin-left: 10px;
+    margin-top: 5px;
+  }
+
+  .dropdown-content {
+    height: 200px;
+    width: 200px;
+    border-radius: 16px;
+    margin-top: -22px;
+  }
+
+  .listItems {
+    background-color: transparent;
+    border: none;
+    padding-left: 0px;
+    padding-top: 15px;
+  }
+
+  .walk,
+  .park,
+  .swim,
+  .groom {
+    background-color: rgb(152, 208, 249);
+    padding-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+
+  .refer-friend {
+    grid-column: 10;
+    grid-row: 1;
+    padding: 10px;
+    border-radius: 16px;
+    position: sticky;
+    top: 35px;
+    height: 200px;
+  }
+
+  /*Admin Page*/
+  .admin-page {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(3, auto);
+    margin: 0px;
+    color: #f0ed92;
+    font-family: "Patrick Hand", cursive;
+    background-color: #1e5a7d;
+    border-radius: 16px;
+  }
+
+  .admin-header {
+    grid-row: 1;
+    grid-column: 1/9;
+    text-align: center;
+    margin: 20px;
+  }
+
+  .create-client-form {
+    grid-row: 2;
+    grid-column: 3;
+    margin: 10px;
+    font-size: 19px;
+  }
+
+  .find-client-form {
+    grid-row: 2;
+    grid-column: 4;
+    margin: 10px;
+    font-size: 19px;
+  }
+
+  .animal-img {
+    grid-row: 2;
+    grid-column: 5;
+    margin: 10px;
+  }
+
+  img#pup-img {
+    border-radius: 16px;
+    border: #f092d7 3px solid;
+    margin-top: 30px;
+  }
+
+  .client-results {
+    grid-row: 2;
+    grid-column: 6;
+    width: 400px;
+    margin: 15px 10px;
+  }
+
+  .client-results-p {
+    border-radius: 16px;
+    border: #f092d7 3px solid;
+    margin-top: 25px;
+    padding: 10px;
+  }
+
+  .create-button,
+  .find-button {
+    margin-top: 20px;
+    border-radius: 10px;
+    color: #f0ed92;
+    background-color: #1e5a7d;
+    border: #f0ed92 3px solid;
+    font-size: 15px;
+  }
+
+  .create-button:hover,
+  .find-button:hover {
+    background-color: #4e8aad;
+  }
+
+  .go-back-button-admin {
+    grid-row: 3;
+    grid-column: 8;
+    margin: 20px 20px;
+    border-radius: 10px;
+    color: #f0ed92;
+    background-color: #1e5a7d;
+    border: #f0ed92 3px solid;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  /*login page*/
+  .login-page {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(3, auto);
+    margin: 10px;
+    color: #f0ed92;
+    font-family: "Patrick Hand", cursive;
+    background-color: #1e5a7d;
+    border-radius: 16px;
+  }
+
+  .login-header {
+    margin: 30px 30px 0px 30px;
+    grid-column: 1/4;
+  }
+
+  .login-form {
+    grid-column: 1;
+    grid-row: 2;
+    margin: 20px 30px;
+    font-size: 20px;
+  }
+
+  .login-button {
+    margin-top: 15px;
+    border-radius: 10px;
+    color: #f0ed92;
+    background-color: #1e5a7d;
+    border: #f0ed92 3px solid;
+    font-size: 18px;
+  }
+
+  .login-button:hover {
+    background-color: #4e8aad;
+  }
+
+  .go-back-button {
+    margin-top: 15px;
+    border-radius: 10px;
+    color: #f0ed92;
+    background-color: #1e5a7d;
+    border: #f0ed92 3px solid;
+    font-size: 18px;
+    width: 160px;
+    text-align: center;
+  }
+
+  .go-back-button:hover {
+    background-color: #4e8aad;
+  }
+}
+
+.admin-page {
+  margin: 20px;
+}
