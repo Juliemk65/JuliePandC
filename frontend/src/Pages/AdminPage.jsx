@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { useState } from "react";
 
 function Admin() {
   const [name, setName] = useState("");
@@ -13,62 +12,74 @@ function Admin() {
   const [clientName, setClientName] = useState("");
   const [results, setResults] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    try {
-      axios
-        .post("http://localhost:3000/adminPage", {
-          name,
-          dog_1,
-          dog_2,
-          dog_3,
-          address,
-        })
-        .then((result) => {
-          console.log(result.data);
-          alert("New Client created, thank you! 🐶🫶🏼🐱");
-        });
-    } catch (error) {
-      //   .catch((err) => console.log(err));
-      console.error("Error fetching data", error);
+  useEffect(() => {
+    async function grabData() {
+      const response = await axios.get("http://localhost:3000/clients/Julie");
+      console.log(response);
+      if (response.status === 200) {
+        setResults(response.data);
+      }
     }
-  };
 
-  const handleSubmitFind = (e) => {
-    e.preventDefault();
-    const results = document.getElementById("results");
-    const dogImage = document.getElementById("dog-image");
-    results.textContent = "";
+    grabData();
+  }, []);
 
-    try {
-      axios
-        .post("http://localhost:3000/clients/:name", {
-          name,
-          clientName,
-          address,
-        })
-        .then((result) => {
-          console.log(`client-side response`, result.data);
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     axios
+  //       .post("http://localhost:3000/adminPage", {
+  //         name,
+  //         dog_1,
+  //         dog_2,
+  //         dog_3,
+  //         address,
+  //       })
+  //       .then((result) => {
+  //         console.log(result.data);
+  //         alert("New Client created, thank you! 🐶🫶🏼🐱");
+  //       });
+  //   } catch (error) {
+  //     //   .catch((err) => console.log(err));
+  //     console.error("Error fetching data", error);
+  //   }
+  // };
 
-          //   setResults(result.data);
-          const nameElement = document.createElement("p");
-          nameElement.className = "client-results-p";
-          nameElement.textContent = `${result.data}`;
+  // const handleSubmitFind = (e) => {
+  //   e.preventDefault();
+  //   const results = document.getElementById("results");
+  //   const dogImage = document.getElementById("dog-image");
+  //   results.textContent = "";
 
-          // Append the elements to the "dataDisplay" div
-          results.appendChild(nameElement);
+  //   try {
+  //     axios
+  //       .post("http://localhost:3000/clients/:name", {
+  //         name,
+  //         clientName,
+  //         address,
+  //       })
+  //       .then((result) => {
+  //         console.log(`client-side response`, result.data);
 
-          if (clientName) {
-            dogImage.innerHTML = `<img src="Images/${clientName}.jpeg" 
-            alt="${clientName}'s Animal photo"
-            id="pup-img"
-            width=250px>`;
-          }
-        });
-    } catch (error) {
-      console.error("Error fetching data", error);
-    }
-  };
+  //         //   setResults(result.data);
+  //         const nameElement = document.createElement("p");
+  //         nameElement.className = "client-results-p";
+  //         nameElement.textContent = `${result.data}`;
+
+  //         // Append the elements to the "dataDisplay" div
+  //         results.appendChild(nameElement);
+
+  //         if (clientName) {
+  //           dogImage.innerHTML = `<img src="Images/${clientName}.jpeg"
+  //           alt="${clientName}'s Animal photo"
+  //           id="pup-img"
+  //           width=250px>`;
+  //         }
+  //       });
+  //   } catch (error) {
+  //     console.error("Error fetching data", error);
+  //   }
+  // };
 
   return (
     <>
@@ -101,7 +112,7 @@ function Admin() {
             onChange={(e) => setAddress(e.target.value)}
           ></input>
 
-          <button
+          {/* <button
             type="submit"
             onClick={handleSubmit}
             className="create-button"
@@ -115,19 +126,20 @@ function Admin() {
           <input
             name="clientName"
             onChange={(e) => setClientName(e.target.value)}
-          />
+          /> */}
           <button type="submit" className="find-button">
             Find Button
           </button>
         </form>
-        <div
+        {/* <div
           id="results"
           onChange={(e) => setResults(e.target.value)}
           value={setResults}
           className="client-results"
         >
           {results.data}
-        </div>
+        </div> */}
+        {JSON.stringify(results.data)}
         <div id="dog-image" className="animal-img"></div>
       </div>
     </>

@@ -5,6 +5,7 @@ const ObjectId = require("mongodb").ObjectId;
 let clientRoutes = express.Router();
 
 //#1-Retrieve ALL
+//http://localhost:3000/clients
 clientRoutes.route("/clients").get(async (req, res) => {
   let db = database.getDb();
   let data = await db.collection("clients").find({}).toArray();
@@ -15,6 +16,7 @@ clientRoutes.route("/clients").get(async (req, res) => {
   }
 });
 //#2-Retrieve ONE
+//http://localhost:3000/clients/:name
 //new ObjectId(req.params.name)
 //Object.keys(data).length > 0
 clientRoutes.route("/clients/:name").get(async (req, res) => {
@@ -27,7 +29,7 @@ clientRoutes.route("/clients/:name").get(async (req, res) => {
   }
 });
 //#3-Create One
-
+//http://localhost:3000/clients
 clientRoutes.route("/clients").post(async (req, res) => {
   let db = database.getDb();
   let mongoObject = {
