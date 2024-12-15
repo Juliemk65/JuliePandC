@@ -1,17 +1,35 @@
 const connect = require("./connections");
 const express = require("express");
 const cors = require("cors");
-const clients = require("./clientRoutes");
+const mongoose = require("mongoose");
+const clientRoutes = require("./clientRoutes");
 
 const app = express();
 const PORT = 3000;
 
+//middleware
 app.use(cors());
 app.use(express.json());
-//line 12 is used to mount the routes to be usable on the frontend
-app.use(clients);
-
-app.listen(PORT, () => {
-  connect.connectToServer();
-  console.log(`Server is running on ${PORT}`);
+app.use((req, res, next) => {
+  console.log(req.path, req.method);
+  next();
 });
+
+//routes
+//used to mount the routes to be usable on the frontend
+
+//http://localhost:3000/api/clientRoutes/clients
+app.use("/api/clientRoutes", clientRoutes);
+
+//connect to db
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => {
+    //listen for requests
+    app.listen(PORT, () => {
+      console.log(`Connected to db, server is running on ${PORT}`);
+    });
+  })
+  .catch((err) => {
+    console.log(err);
+  });
