@@ -8,6 +8,7 @@ function Admin() {
   const [dog_2, setDogName2] = useState("");
   const [dog_3, setDogName3] = useState("");
   const [address, setAddress] = useState("");
+  const [repeat_client, SetRepeat_Client] = useState("");
 
   const [clientName, setClientName] = useState("");
   const [clientNameD, setClientNameD] = useState("");
@@ -54,6 +55,7 @@ function Admin() {
           dog_2,
           dog_3,
           address,
+          repeat_client,
         })
         .then((result) => {
           console.log(result.data);
@@ -129,6 +131,7 @@ function Admin() {
     const results = document.getElementById("results");
     const dogImage = document.getElementById("dog-image");
     results.textContent = "";
+    dogImage.innerHTML = "";
 
     try {
       axios
@@ -147,9 +150,6 @@ function Admin() {
           if (result.data === null) {
             alert("client does not exist in system! ):");
           }
-          if (!clientName) {
-            alert("Please enter a name!");
-          }
 
           if (result.data.dog_2 === undefined || result.data.dog_2 === "") {
             nameElement.textContent = `Client Name: ${result.data.name} \r\nDog Name: ${result.data.dog_1} \r\nAddress: ${result.data.address} \r\nRepeat Client: ${result.data.repeat_client}`;
@@ -160,6 +160,10 @@ function Admin() {
             nameElement.textContent = `Client Name: ${result.data.name} \r\nDog Names: ${result.data.dog_1}, ${result.data.dog_2}  \r\nAddress: ${result.data.address}\r\nRepeat Client: ${result.data.repeat_client}`;
           } else {
             nameElement.textContent = `Client Name: ${result.data.name} \r\nDog Names: ${result.data.dog_1}, ${result.data.dog_2}, ${result.data.dog_3}  \r\nAddress: ${result.data.address} \r\nRepeat Client: ${result.data.repeat_client}`;
+          }
+
+          if (!clientName) {
+            alert("Please enter a name!");
           }
 
           // Append the elements to the "dataDisplay" div
@@ -208,6 +212,24 @@ function Admin() {
             name="address"
             onChange={(e) => setAddress(e.target.value)}
           ></input>
+          <br />
+          <span id="radio-buttons">
+            <h6>Are they a repeat client?</h6>
+            <input
+              type="radio"
+              value={true}
+              name="repeat_client"
+              onChange={(e) => SetRepeat_Client(e.target.value)}
+            ></input>{" "}
+            <label>True</label>
+            <input
+              type="radio"
+              value={false}
+              name="repeat_client"
+              onChange={(e) => SetRepeat_Client(e.target.value)}
+            ></input>{" "}
+            <label>False</label>
+          </span>
 
           <button
             type="submit"
@@ -224,6 +246,7 @@ function Admin() {
               name="clientName"
               value={clientName}
               onChange={(e) => setClientName(e.target.value)}
+              required
             />
             <button type="submit" className="find-button">
               Find Button
@@ -235,6 +258,7 @@ function Admin() {
               name="clientNameD"
               value={clientNameD}
               onChange={(e) => setClientNameD(e.target.value)}
+              required
             />
 
             <button
@@ -261,7 +285,11 @@ function Admin() {
         <form className="update-client-form" onSubmit={handleSubmitUpdate}>
           <h4>Update an existing client:</h4>
           <label htmlFor="name">Client Name:</label>
-          <input name="name" onChange={(e) => setName(e.target.value)}></input>
+          <input
+            name="name"
+            onChange={(e) => setName(e.target.value)}
+            required
+          ></input>
           <label htmlFor="dog_1">Dog Name (1):</label>
           <input
             name="dog_1"
@@ -282,6 +310,24 @@ function Admin() {
             name="address"
             onChange={(e) => setAddress(e.target.value)}
           ></input>
+          <br />
+          <span id="radio-buttons">
+            <h6>Are they a repeat client?</h6>
+            <input
+              type="radio"
+              value={true}
+              name="repeat_client"
+              onChange={(e) => SetRepeat_Client(e.target.value)}
+            ></input>{" "}
+            <label>True</label>
+            <input
+              type="radio"
+              value={false}
+              name="repeat_client"
+              onChange={(e) => SetRepeat_Client(e.target.value)}
+            ></input>{" "}
+            <label>False</label>
+          </span>
 
           <button type="submit" className="create-button">
             Update Client

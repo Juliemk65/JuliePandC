@@ -1,10 +1,10 @@
 import react from "react";
 
-import Boarding from "/Users/Juliemk/Desktop/paws&claws/paws-repo/frontend/src/Images/Boarding.jpeg";
-import Dropin from "/Users/Juliemk/Desktop/paws&claws/paws-repo/frontend/src/Images/Dropin.jpeg";
+import Boarding from "/Users/Juliemk/paws-repo-2/paws-repo/frontend/src/Images/Boarding.jpeg";
+import Dropin from "/Users/Juliemk/paws-repo-2/paws-repo/frontend/src/Images/Dropin.jpeg";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Daycare from "/Users/Juliemk/Desktop/paws&claws/paws-repo/frontend/src/Images/Daycare.jpeg";
+import Daycare from "/Users/Juliemk/paws-repo-2/paws-repo/frontend/src/Images/Daycare.jpeg";
 
 function Services() {
   const [hover, setHover] = useState(false);

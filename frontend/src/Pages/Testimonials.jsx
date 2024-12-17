@@ -13,12 +13,12 @@ const Testimonials = () => {
   return (
     <section className="testimonials">
       <Slide
-        autoplay={false}
+        autoplay={true}
         onChange={function noRefCheck() {}}
         onStartChange={function noRefCheck() {}}
       >
         <div className="mySlides ">
-          <div class="nametext">Lura F.</div>
+          <div class="nametext">Lura F. ⭐️⭐️⭐️⭐️⭐️</div>
           <img className="testImg" alt="pinkAvatar" src={Lura}></img>
           <div className="text">
             "Julie is wonderful! We have used her several times and she is just
@@ -29,13 +29,13 @@ const Testimonials = () => {
         </div>
 
         <div class="mySlides">
-          <div class="nametext">Elaine J.</div>
+          <div class="nametext">Elaine J. ⭐️⭐️⭐️⭐️⭐️</div>
           <img className="testImg" alt="yellowAvatar" src={Elaine} />
           <div className="text">"Kona loves Julie - We love Julie!"</div>
         </div>
 
         <div class="mySlides">
-          <div class="nametext">Anna P.</div>
+          <div class="nametext">Anna P. ⭐️⭐️⭐️⭐️⭐️</div>
           <span className="two-cats">
             <img className="pumpkin" alt="yellowAvatar" src={Anna} />
             <img className="testImg" alt="yellowAvatar" src={Anna2} />
@@ -46,7 +46,7 @@ const Testimonials = () => {
         </div>
 
         <div class="mySlides">
-          <div class="nametext">Jill M.</div>
+          <div class="nametext">Jill M. ⭐️⭐️⭐️⭐️⭐️</div>
           <img className="testImg" alt="yellowAvatar" src={Jill} />
           <div className="text">
             "Julie stepped in when another sitter canceled within a few days of
@@ -57,7 +57,7 @@ const Testimonials = () => {
         </div>
 
         <div class="mySlides">
-          <div class="nametext">Lina P.</div>
+          <div class="nametext">Lina P. ⭐️⭐️⭐️⭐️⭐️</div>
           <img className="testImg" alt="yellowAvatar" src={Lina} />
           <div className="text">
             "Thank you for taking great care of Coco and doing extra things for
@@ -67,7 +67,7 @@ const Testimonials = () => {
         </div>
 
         <div class="mySlides">
-          <div class="nametext">Jay P..</div>
+          <div class="nametext">Jay P. ⭐️⭐️⭐️⭐️⭐️</div>
           <img className="testImg" alt="yellowAvatar" src={Jay} />
           <div className="text">
             "The best ever to do it! Always available and always go beyond and
