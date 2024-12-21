@@ -50,16 +50,16 @@ const deleteClient = async (req, res) => {
 
 //update a client
 const updateClient = async (req, res) => {
-  const { clientName } = req.params;
+  const { clientNameU } = req.params;
 
   const client = await ClientModel.findOneAndUpdate(
-    { name: clientName },
+    { name: clientNameU },
     {
       ...req.body,
     }
   );
 
-  if (!clientName) {
+  if (!clientNameU) {
     return res.status(404).json({ error: "No such client" });
   }
   res.status(200).json(client);

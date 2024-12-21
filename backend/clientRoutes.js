@@ -29,9 +29,9 @@ clientRoutes.get("/:clientName", getOneClient);
 clientRoutes.post("/clientsAdd", createClient);
 
 // //#4-Update One
-clientRoutes.patch("/clients/:clientName", updateClient);
-// //#5-Delete One
+clientRoutes.patch("/clients/:clientNameU", updateClient);
 
+// //#5-Delete One
 clientRoutes.delete("/clients/:clientNameD", deleteClient);
 
 module.exports = clientRoutes;

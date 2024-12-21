@@ -12,7 +12,11 @@ function Services() {
   return (
     <main className="main">
       <div className="cards">
-        <Link to="/servicesPage" className="daycareLink">
+        <Link
+          to="/servicesPage"
+          className="daycareLink"
+          style={{ textDecoration: "none" }}
+        >
           <article className="daycare">
             <h1 className="opt1">Daycare </h1>
             <img className="leo" src={Daycare}></img>
@@ -21,7 +25,11 @@ function Services() {
           </article>
         </Link>
 
-        <Link to="/servicesPage" className="boardingLink">
+        <Link
+          to="/servicesPage"
+          className="boardingLink"
+          style={{ textDecoration: "none" }}
+        >
           <article className="boarding">
             <h1 className="opt2">Boarding</h1>
 
@@ -30,7 +38,11 @@ function Services() {
           </article>
         </Link>
 
-        <Link to="/servicesPage" className="dropinLink">
+        <Link
+          to="/servicesPage"
+          className="dropinLink"
+          style={{ textDecoration: "none" }}
+        >
           <article className="dropin">
             <h1 className="opt3">Drop-in Visits </h1>
             <img className="murphy" src={Dropin}></img>

@@ -13,7 +13,7 @@ const Testimonials = () => {
   return (
     <section className="testimonials">
       <Slide
-        autoplay={true}
+        autoplay={false}
         onChange={function noRefCheck() {}}
         onStartChange={function noRefCheck() {}}
       >
@@ -37,8 +37,18 @@ const Testimonials = () => {
         <div class="mySlides">
           <div class="nametext">Anna P. ⭐️⭐️⭐️⭐️⭐️</div>
           <span className="two-cats">
-            <img className="pumpkin" alt="yellowAvatar" src={Anna} />
-            <img className="testImg" alt="yellowAvatar" src={Anna2} />
+            <img
+              className="pumpkin"
+              alt="yellowAvatar"
+              src={Anna}
+              width={250}
+            />
+            <img
+              className="testImg"
+              alt="yellowAvatar"
+              src={Anna2}
+              width={80}
+            />
           </span>
           <div className="text">
             "Julie is always doing a great job taking care of our cats!"

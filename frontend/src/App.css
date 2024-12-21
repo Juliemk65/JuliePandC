@@ -15,6 +15,9 @@
   font-family: "Patrick Hand", cursive;
   background-color: #1e5a7d;
 }
+input {
+  border-radius: 15px;
+}
 
 a.navItems,
 textpath.title {
@@ -45,6 +48,7 @@ textpath.title {
   width: 350px;
   margin: 15px;
   color: rgb(71, 145, 255);
+  text-decoration: none;
 }
 
 .nav {
@@ -86,7 +90,7 @@ textpath.title {
   border: 4px solid rgb(71, 145, 255);
   border-radius: 16px;
   margin: 40px;
-  font-size: 20px;
+  font-size: 15px;
   margin-top: 10px;
   margin-bottom: 60px;
   color: rgb(21, 114, 255);
@@ -99,6 +103,7 @@ textpath.title {
 .daycareLink {
   text-decoration: none;
   text-align: center;
+  font-size: 15px;
 }
 
 .boarding:hover,
@@ -178,7 +183,7 @@ textpath.title {
 
 .testImg {
   display: block;
-  width: 350px;
+  width: 250px;
 }
 
 .mySlides {
@@ -508,6 +513,186 @@ margin-bottom: 30px; */
   margin: 10px 20px 30px 20px;
 }
 
+/*Admin page*/
+.admin-page {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, auto);
+
+  color: #f0ed92;
+  font-family: "Patrick Hand", cursive;
+  background-color: #1e5a7d;
+  border-radius: 16px;
+  padding-bottom: 70px;
+}
+
+.admin-header {
+  grid-row: 1;
+  grid-column: 1/9;
+  text-align: center;
+  margin: 20px 10px;
+  max-width: 100%;
+}
+
+.create-client-form {
+  grid-row: 2;
+  grid-column: 2;
+  margin: 10px;
+  font-size: 19px;
+}
+
+.find-client-form {
+  margin-bottom: 50px;
+}
+
+.delete-client-form {
+  margin-bottom: 20px;
+}
+
+.find-and-delete {
+  grid-row: 3;
+  grid-column: 2;
+  margin: 45px 10px;
+  font-size: 19px;
+}
+
+.animal-img {
+  grid-row: 3;
+  grid-column: 2;
+  margin: 520px 10px;
+}
+
+img#pup-img {
+  border-radius: 16px;
+  border: #f092d7 3px solid;
+  margin-top: 30px;
+  width: 200px;
+}
+
+.client-results {
+  grid-row: 3;
+  grid-column: 2;
+  margin: 15px 5px;
+  max-width: 100%;
+  margin: 350px 10px;
+}
+
+.client-results-p {
+  border-radius: 16px;
+  border: #f092d7 3px solid;
+  margin-top: 25px;
+  padding: 20px;
+  overflow-x: scroll;
+  width: 90%;
+}
+
+.create-button,
+.find-button,
+.delete-button {
+  margin-top: 20px;
+  border-radius: 10px;
+  color: #f0ed92;
+  background-color: #1e5a7d;
+  border: #f0ed92 3px solid;
+  font-size: 15px;
+}
+
+.delete-button {
+  color: red;
+  background-color: #f0ed92;
+}
+
+.create-button:hover,
+.find-button:hover,
+.delete-button:hover {
+  background-color: #4e8aad;
+}
+
+.update-client-form {
+  grid-row: 3;
+  grid-column: 1;
+  margin: 40px 20px;
+}
+
+.go-back-button-admin {
+  grid-row: 4;
+  grid-column: 2;
+  margin: 20px 30px;
+  border-radius: 10px;
+  color: #f0ed92;
+  background-color: #1e5a7d;
+  border: #f0ed92 3px solid;
+  font-size: 15px;
+  text-align: center;
+  /*align-items: center;
+  height: 25px;
+  padding: 10px 30px 30px 30px;
+  position: absolute;
+  right: 10px;
+  bottom: 220px; */
+}
+
+.go-back-button-admin:hover {
+  background-color: #4e8aad;
+}
+
+.list-names {
+  margin: 20px;
+  width: 150px;
+}
+
+/*login page*/
+.login-page {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(3, auto);
+  margin: 10px;
+  color: #f0ed92;
+  font-family: "Patrick Hand", cursive;
+  background-color: #1e5a7d;
+  border-radius: 16px;
+}
+
+.login-header {
+  margin: 30px 30px 0px 30px;
+  grid-column: 1/4;
+}
+
+.login-form {
+  grid-column: 1;
+  grid-row: 2;
+  margin: 20px 30px;
+  font-size: 20px;
+}
+
+.login-button {
+  margin-top: 15px;
+  border-radius: 10px;
+  color: #f0ed92;
+  background-color: #1e5a7d;
+  border: #f0ed92 3px solid;
+  font-size: 18px;
+}
+
+.login-button:hover {
+  background-color: #4e8aad;
+}
+
+.go-back-button {
+  margin-top: 15px;
+  border-radius: 10px;
+  color: #f0ed92;
+  background-color: #1e5a7d;
+  border: #f0ed92 3px solid;
+  font-size: 18px;
+  width: 160px;
+  text-align: center;
+}
+
+.go-back-button:hover {
+  background-color: #4e8aad;
+}
+
 @media (min-width: 1080px) {
   input {
     border-radius: 15px;
@@ -537,6 +722,7 @@ margin-bottom: 30px; */
     width: 350px;
     margin: 15px;
     color: rgb(71, 145, 255);
+    text-decoration: none;
   }
 
   .nav {
@@ -937,17 +1123,6 @@ margin-bottom: 30px; */
   }
 
   /*Admin Page*/
-  .admin-page {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(4, auto);
-    margin: 0px;
-    color: #f0ed92;
-    font-family: "Patrick Hand", cursive;
-    background-color: #1e5a7d;
-    border-radius: 16px;
-    padding-bottom: 70px;
-  }
 
   .admin-header {
     grid-row: 1;
@@ -958,7 +1133,7 @@ margin-bottom: 30px; */
 
   .create-client-form {
     grid-row: 2;
-    grid-column: 3;
+    grid-column: 2;
     margin: 10px;
     font-size: 19px;
   }
@@ -973,27 +1148,28 @@ margin-bottom: 30px; */
 
   .find-and-delete {
     grid-row: 2;
-    grid-column: 4;
+    grid-column: 3;
     margin: 45px 10px;
     font-size: 19px;
   }
 
   .animal-img {
     grid-row: 2;
-    grid-column: 5;
-    margin: 10px;
+    grid-column: 4;
+    margin: 10px auto;
   }
-
+  /* 
   img#pup-img {
     border-radius: 16px;
     border: #f092d7 3px solid;
     margin-top: 30px;
-  }
+  } */
 
   .client-results {
     grid-row: 2;
-    grid-column: 6;
+    grid-column: 5;
     margin: 15px 20px;
+    max-width: 100%;
   }
 
   .client-results-p {
@@ -1001,6 +1177,7 @@ margin-bottom: 30px; */
     border: #f092d7 3px solid;
     margin-top: 25px;
     padding: 20px;
+    overflow-x: scroll;
   }
 
   .create-button,
@@ -1013,11 +1190,11 @@ margin-bottom: 30px; */
     border: #f0ed92 3px solid;
     font-size: 15px;
   }
-
+  /* 
   .delete-button {
     color: red;
     background-color: #f0ed92;
-  }
+  } */
 
   .create-button:hover,
   .find-button:hover,
@@ -1027,13 +1204,13 @@ margin-bottom: 30px; */
 
   .update-client-form {
     grid-row: 3;
-    grid-column: 3;
+    grid-column: 2;
     margin: 15px 10px;
     margin-top: 40px;
   }
 
   .go-back-button-admin {
-    grid-row: 3;
+    grid-row: 4;
     grid-column: 6;
     margin: 20px 30px;
     border-radius: 10px;
@@ -1042,16 +1219,15 @@ margin-bottom: 30px; */
     border: #f0ed92 3px solid;
     font-size: 15px;
     text-align: center;
-    align-items: center;
-    height: 25px;
-    padding: 10px 30px 30px 30px;
-    position: absolute;
-    right: 10px;
-    bottom: 220px;
   }
 
   .go-back-button-admin:hover {
     background-color: #4e8aad;
+  }
+
+  .list-names {
+    margin: 20px;
+    width: 150px;
   }
 
   /*login page*/
@@ -1105,8 +1281,4 @@ margin-bottom: 30px; */
   .go-back-button:hover {
     background-color: #4e8aad;
   }
-}
-
-.admin-page {
-  margin: 20px;
 }

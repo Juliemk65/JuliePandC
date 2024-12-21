@@ -1,4 +1,5 @@
 import react, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   const [name, setName] = useState("");
@@ -24,8 +25,18 @@ function Footer() {
       <section className="one">
         <h1>Paws&Claws Daycare & Resort</h1>
         <p>325 Cotton CT</p>
-        <p>T: (770)-689-9699</p>
-        <p>Email: Juliemk65@gmail.com</p>
+        <p>Tel: (770)-689-9699</p>
+        <span>
+          <label>Email us at:</label>
+          <Link
+            onClick={() =>
+              (window.location.href = "mailto:Juliemk65@gmail.com")
+            }
+            style={{ color: "blue" }}
+          >
+            Juliemk65@gmail.com
+          </Link>
+        </span>
       </section>
       <section className="two">
         <h3 className="hoursHeader">Hours of Operation</h3>

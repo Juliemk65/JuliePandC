@@ -90,7 +90,11 @@ function BookingPage() {
           "
           fill="none"
         />
-        <Link to="/" className="homepageLink">
+        <Link
+          to="/"
+          className="homepageLink"
+          style={{ textDecoration: "none" }}
+        >
           <text>
             <textPath
               href="#circlePath"

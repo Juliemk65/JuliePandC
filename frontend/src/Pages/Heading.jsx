@@ -20,7 +20,11 @@ function Heading() {
           "
           fill="none"
         />
-        <Link to="/" className="homepageLink">
+        <Link
+          to="/"
+          className="homepageLink"
+          style={{ textDecoration: "none" }}
+        >
           <text>
             <textPath
               href="#circlePath"
@@ -28,6 +32,7 @@ function Heading() {
               className="title"
               fill="#2a729b"
               fontSize={28}
+              style={{ textDecoration: "none" }}
             >
               Paws and Claws Daycare & Resort
             </textPath>
