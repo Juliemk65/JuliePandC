@@ -1,5 +1,6 @@
 {
   "name": "frontend",
+  "homepage": "https://juliemk65.github.io/JuliePandC",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,7 +9,9 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "vite -watch"
+    "start": "vite -watch",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.1",
