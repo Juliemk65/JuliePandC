@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, matchPath } from "react-router-dom";
 import { useState } from "react";
-import AddOnServices from "../Pages/AddOnServices";
+import AddOnServices from "./AddOnServices";
 //import DropdownMenu from "./DropdownMenu";
 //import styles from "../App.css";
 import styled from "styled-components";

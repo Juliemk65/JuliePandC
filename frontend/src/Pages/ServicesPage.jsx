@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import IndividualPlayImg from "/Users/Juliemk/paws-claws-repo/paws1/src/Individual-Play-Images/IMG_3270.jpeg";
 import PuppyPlayImg from "/Users/Juliemk/paws-claws-repo/paws1/src/Puppy-play-Images/IMG_0417.jpeg";
 import SeniorPlayImg from "/Users/Juliemk/paws-claws-repo/paws1/src/Senior-Play-Images/IMG_0352.jpeg";
-import AddOnServices from "../Pages/AddOnServices";
+import AddOnServices from "./AddOnServices";
 import styled from "styled-components";
 
 function ServicesPage() {

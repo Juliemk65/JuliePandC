@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "docs",
   "homepage": "https://juliemk65.github.io/JuliePandC",
   "private": true,
   "version": "0.0.0",
@@ -20,10 +20,13 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "axios": "^1.7.9",
     "bootstrap": "^5.3.3",
+    "gh-pages": "^6.3.0",
     "mongodb": "4.1",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.6",
     "react-dom": "^18.3.1",
+    "react-error-boundary": "^5.0.0",
+    "react-router-dom": "^7.1.1",
     "react-slideshow-image": "^4.3.2",
     "styled-components": "^6.1.13",
     "watch": "^1.0.2"
